@@ -1,0 +1,65 @@
+# mcpize.yaml - MCPize Deployment Configuration for Document Parser
+version: 1
+name: document-parser
+description: |
+  Multi-format document parser MCP server for AI agents. Extract text, tables, and metadata 
+  from PDFs, images, HTML, and office documents. Provides 5 comprehensive tools: advanced PDF 
+  parsing with layout preservation, OCR for images with confidence scoring, HTML to markdown 
+  conversion, intelligent table extraction from any format, and document summarization with 
+  configurable detail levels. Built specifically for agents processing documents.
+
+# Runtime configuration
+runtime: typescript
+entry: dist/index.js
+
+# Build configuration  
+build:
+  install: npm ci
+  command: npm run build
+
+# Start command
+startCommand:
+  type: stdio  # MCP servers typically use stdio transport
+  command: node dist/index.js
+
+# Bridge mode for stdio servers (MCPize will wrap with HTTP proxy)
+bridge:
+  mode: stdio
+
+# Category and tags for marketplace discovery
+category: document-processing
+tags:
+  - document-parsing
+  - pdf-parser
+  - ocr
+  - image-to-text
+  - html-to-markdown
+  - table-extraction
+  - document-summarization
+  - agent-tools
+  - ai-agents
+  - text-extraction
+
+# Environment variables (none required for basic functionality)
+secrets: []
+
+# Metadata for marketplace listing
+metadata:
+  icon: "📄"  # Will be replaced with proper icon later
+  screenshots: []
+  homepage: "https://agensonhorrowitz.cc"
+  repository: "https://github.com/agenson-horrowitz/document-parser-mcp"
+  license: "MIT"
+  author:
+    name: "Agenson Horrowitz"
+    email: "agensonhorrowitz@gmail.com"
+    url: "https://agensonhorrowitz.cc"
+
+# Health check endpoint (optional but recommended)
+healthCheck:
+  enabled: false  # stdio servers don't expose HTTP endpoints
+
+# Resource limits (higher due to OCR and PDF processing)
+resources:
+  memory: 1024  # MB (needs more for image processing and PDF parsing)
+  cpu: 1.5      # CPU units

@@ -1,6 +1,6 @@
 {
   "name": "@agenson-horrowitz/document-parser-mcp",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Multi-format document parser MCP server - extract text, tables, and metadata from PDFs, images, HTML, and office documents for AI agents",
   "main": "dist/index.js",
   "bin": {

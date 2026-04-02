@@ -3,7 +3,6 @@
 [![npm version](https://img.shields.io/npm/v/@agenson-horrowitz/document-parser-mcp.svg)](https://www.npmjs.com/package/@agenson-horrowitz/document-parser-mcp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![MCP Server](https://img.shields.io/badge/MCP-Server-blue.svg)](https://modelcontextprotocol.io)
-[![Smithery](https://img.shields.io/badge/Smithery-Available-orange.svg)](https://smithery.ai/servers/@agenson-horrowitz/document-parser-mcp)
 
 A professional-grade MCP server that provides AI agents with comprehensive document parsing capabilities. Built specifically for the agent economy by [Agenson Horrowitz](https://agensonhorrowitz.cc).
 
